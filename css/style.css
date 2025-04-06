@@ -1,0 +1,250 @@
+/*Общие стили*/
+:root {
+   --c-them: #266EC4;
+   --color-bg: #fff;
+   --c-btn: #1a73e8;
+   --c-btn-hover:#709fdd;
+   --c-font:#C1E0FF;
+
+
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+html{
+    font-size: 10px;
+}
+body{
+   /* height: 100%;
+    display: flex;
+    flex-direction: column;*/
+    color: #000;
+}
+.wrepper{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--c-default);
+}
+[class*="__container"] {
+    max-width: 1480px; /*1450px*/
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.header{
+    flex: 0 0 auto; 
+    margin-bottom: 10px;
+    background-color: var(--color-white);
+}
+.main{
+    flex: 1 0 auto;
+}
+.footer{
+    flex: 0 0 auto;
+}
+@font-face {
+    font-family: "BebasNeue-Bold";
+    font-display: swap;
+    src: url("../fonts/BebasNeue-Bold.ttf") format("ttf"), url("../fonts/BebasNeue-Bold.woff") format("woff"), url("../fonts/BebasNeue-Bold.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "gilroy-bold";
+    font-display: swap;
+    src: url("../fonts/gilroy-bold.ttf") format("ttf"), url("../fonts/gilroy-bold.woff") format("woff"), url("../fonts/gilroy-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OpenSans-Bold";
+    font-display: swap;
+    src: url("../fonts/OpenSans-Bold.ttf") format("ttf"), url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "OpenSans-Regular";
+    font-display: swap;
+    src: url("../fonts/OpenSans-Regular.ttf") format("ttf"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto-Medium";
+    font-display: swap;
+    src: url("../fonts/Roboto-Medium.ttf") format("ttf"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Roboto-Regular";
+    font-display: swap;
+    src: url("../fonts/Roboto-Regular.ttf") format("ttf"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "TeXGyreAdventor-Regular";
+    font-display: swap;
+    src: url("../fonts/TeXGyreAdventor-Regular.ttf") format("ttf"), url("../fonts/TeXGyreAdventor-Regular.woff") format("woff"), url("../fonts/TeXGyreAdventor-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*------------------------------header--*/
+.d-flex{
+    display: flex;
+    flex-direction: row;
+    
+}
+.footer,
+.header{
+    background-color: var(--c-them);
+}
+.header__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__logo{
+    padding: 1.2rem 0;
+    align-items: center;
+   
+
+}
+.header-logo__img{}
+.header-logo__text{
+  
+    padding-left: 2.9rem;
+}
+.logo-text{
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'TeXGyreAdventor-Regular';
+    font-size: 1.6rem;
+}
+.header-setting__item,
+.header-social__item{
+    padding-left: 2.9rem;
+}
+.header__setting{
+    margin-left: 14.8rem;
+}
+
+
+/*----------------------------footer--*/
+.footer__container{
+    flex-wrap: wrap;
+}
+.footer-block{}
+.footer__logo{
+    padding-top: 2.4rem;
+}
+.footer-logo__text{
+    padding-left: 2.4rem;
+}
+.logo-text__row{
+    display: block;
+}
+.footer__blockMenu{
+    padding-top: 2.rem;
+}
+.menu-footer__link,
+.menu-footer__item{
+    list-style-type: disc;
+    color: var(--c-font);
+    font-family: 'TeXGyreAdventor-Regular';
+    font-size: 1.6rem;
+}
+.menu-footer__link{
+    border-bottom: solid 1px transparent;
+    transition: .5s;
+}
+.menu-footer__link:hover{
+    border-bottom: solid 1px var(--c-font);
+}
+.menu-footer__list{
+    padding-top: 2.7rem;
+    padding-left: 2.7rem;
+    padding-bottom: 2.7rem;
+}
+
+.contact-footer__item,
+.contact-footer__link{
+    color: var(--c-font);
+    font-family: 'TeXGyreAdventor-Regular';
+    font-size: 1.6rem;
+    display: flex;
+    align-items:center;
+}
+.contact-footer__item{
+    padding-bottom: 2rem;
+}
+.contact-footer__title{
+    padding-left: 4rem;
+}
+.contact-footer__title::nth-child(1){
+    padding-left: 5rem;
+}
+.copyrigth{
+    border-top: 1px solid #fff;
+    width: 100%;
+}
+.copyrigth__text{
+    padding: 3rem 0;
+    font-family: "OpenSans-Regular";
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+
+}
+.footer__col{
+    padding-left: 3rem;
+}
+.slider-evants{
+    display: flex;
+    min-width:0;
+}
+.slider-evants>.slick-arrow{
+    background-color: var(--c-btn-hover);
+}
+
+.evants_item>img{
+    margin: 0 auto;
+}
+
+
+/*
+
+@media screen and (max-width: 400px){
+    .fields{
+        width: 100%;
+    
+    }
+
+
+}*/
+
+
+
+
+
+
+
+
+
+
