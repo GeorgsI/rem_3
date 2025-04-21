@@ -59,8 +59,30 @@ $(document).ready(function(){
 
 
 
+let iconMenu = document.querySelector('.menu__icon');
+if(iconMenu){
+    let bodyMenu = document.querySelector('.menu__body');
+    iconMenu.addEventListener("click", function(e){
+        document.body.classList.toggle('_lock');
+        iconMenu.classList.toggle('_active');
+        bodyMenu.classList.toggle('_active');
+    });
+}
 
 
+
+let menuArrows = document.querySelectorAll('.menu__arrow');
+let menuDrops = document.querySelectorAll('.dropdown');
+    if(menuDrops.length>0){
+        for(let index= 0; index < menuDrops.length; index++){
+                let menuDrop = menuDrops[index];
+                menuDrop.addEventListener('click', function(e){
+                menuDrop.parentElement.classList.toggle('_active');
+            });
+        }
+    }
+
+    
 
 
 //console.log(rr);
